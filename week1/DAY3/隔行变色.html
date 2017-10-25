@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            color: #777777;
+        }
+
+        a, a:hover, a:active {
+            color: #777777;
+            text-decoration: none;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        #hotNews {
+            margin: 20px auto;
+            padding: 20px;
+            width: 300px;
+            border: 1px dashed red;
+
+        }
+
+        #hotNews li {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        /*使用CSS3中新增加的结构伪类选择器-*/
+        #hotNews li:nth-child(even) {
+            background: #e1e1e1;
+        }
+        #hotNews li:nth-child(4n+1){
+            background: #00a67c;
+        }
+        #hotNews li:nth-child(4n+2){
+            background: #1d9fd3;
+        }
+        #hotNews li:nth-child(4n+3){
+            background: #ed3a3a;
+        }
+        #hotNews li:nth-child(4n){
+            background: #7a7a7a;
+        }
+        #hotNews li:hover{
+            background: greenyellow;
+        }
+    </style>
+</head>
+<body>
+<ul id="hotNews">
+    <li><a href="#">中国已成为促进世界和平的中坚力量 理上网来</a></li>
+    <li><a href="#">经济一枝独秀 对世界经济增长贡献率稳居第一</a></li>
+    <li><a href="#">公立医院综合改革全面推开：取消药品加成</a></li>
+    <li><a href="#">国家工商总局印发支持雄安新区规划建设意见</a></li>
+    <li><a href="#">国家工商总局印发支持雄安新区规划建设意见</a></li>
+    <li><a href="#">国家工商总局印发支持雄安新区规划建设意见</a></li>
+    <li><a href="#">国家工商总局印发支持雄安新区规划建设意见</a></li>
+    <li><a href="#">国家工商总局印发支持雄安新区规划建设意见</a></li>
+    <li><a href="#">国家工商总局印发支持雄安新区规划建设意见</a></li>
+    <li><a href="#">国家工商总局印发支持雄安新区规划建设意见</a></li>
+</ul>
+</body>
+</html>

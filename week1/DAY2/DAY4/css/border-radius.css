@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+a, a:hover{
+    color: #777777;
+    text-decoration: none;}
+
+ ul li{
+    list-style: none;
+}
+#box{
+    margin: 10px auto;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #2e2e2e;
+}
+#box li{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+}
+.c1{
+    background: #1d9fd3;
+}
+.c2{
+    background: yellowgreen;
+}
+.c3{
+    background: navajowhite;
+}

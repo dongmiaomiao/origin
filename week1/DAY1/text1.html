@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--lang="en" ：language="english"设置当前页面的语言为英语，当页面中出现非英语的时候，浏览器会给出是否翻译的提示-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--行内导入JS（不推荐：不安全，容易被别人修改脚本恶意篡改）-->
+<div onclick="alert('gao jia xing is very good')">翻我牌</div>
+
+<!--内嵌导入JS-->
+<!--我们一般会把JS代码写在body中的最底部（写在其它位置也不会报错）浏览器加载页面一般都是从上到下加载的，JS一般是用来操作DOM元素的，我们需要先保证DOM加载完成，在JS中才可以获取到这些元素，然后进行相关的操作，所以我们会把JS放在结构的下面再加载；
+  放在下面也有一个好处，可以让结构样式先出来再加载JS，减少页面的呈现时间；
+
+  可不可以既把JS放在上面，也能让结构完成在执行某些JS代码呢？
+     能，使用原生JS中的window.onload或者JQ中的$(document).ready(function(){})
+     可以实现：JQ中采用的事DOM2中的DOMContentLoaded时间完成的....
+  -->
+<script>
+    //=>在真实项目中，我们一般会把CSS放在BODY的上面，把JS放在BODY的末尾(约定俗成的规范)
+    //==>BOODY中编写的都是HTML标签，JS很多时候需要操作这些元素，首先我们要保证元素加载成功，才可以在JS中获取到（JS放在结构之后加载，JS放在BODY的末尾）
+    //==>如果把JS放在标签前面了，如何等到结构加载完成再加载JS？
+    //JS：window.onload=function(){} 页面中所以资源文件都加载完
+    //JQ：$(document).ready(function(){}) 页面中的结构加载完成就会执行操作  window.addEventListener('load',function(){},false) / window.attachEvent('onreadystatechange',function(){})
+
+    //1、写静态页面
+    //->从UI设计师手里拿到设计稿（静态的图片：PSD），使用HTML+CSS把图片变为静态的HTML页面
+    //2、拿JS写一些
+
+    //=>内嵌导入和外链导入不能结合在一起，如果当前是外链导入的，那么在SCRIPT脚本块中编写的所有代码都不会执行
+
+    alert('hello world');
+</script>
+
+
+<!--外链式导入JS:在script脚本块中不能编写其它的JS代码，写了浏览器也不会执行，它只会识别外部JS文件中的代码-->
+<script src="js/1.js"></script>
+
+
+
+<script src="js/1.js">
+    alert('hello word!');
+</script>
+
+</body>
+</html>
+
+
+<!--外链导入式和导入式导入的区别？-->

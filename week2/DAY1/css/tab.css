@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+ul{
+    list-style: none;
+}
+#oTab{
+    width: 500px;
+    margin: 40px auto;
+}
+#oTab ul{
+
+overflow: hidden;
+    top: 1px;
+    position: relative;
+}
+#oTab ul li{
+    padding: 0 10px;
+    margin-right: 10px;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #a4a4a4;
+    cursor: pointer;
+
+}
+#oTab ul li.select{
+    background: #00a67c;
+    border-bottom-color: #00a67c;
+}
+
+#oTab div{
+    display: none;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 1px solid #1d9fd3;
+    background: #00a67c;
+ }
+ #oTab div.select{
+     display: block;
+
+ }
